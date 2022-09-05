@@ -6,15 +6,21 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Pix Point")),
+      //backgroundColor: Color.fromARGB(255, 24, 19, 26),
+      appBar: AppBar(title:  Text("Pix Point", style: TextStyle(color: Colors.black),), backgroundColor: Color.fromARGB(255, 169, 87, 216),),
       body: Column(
         children: [
           ListTile(
-            leading:Icon(Icons.emoji_people_outlined) ,
-            title: Text("Maria"),
+            leading:ClipOval(child: Container(child: Icon(Icons.emoji_people_outlined, size: 50,), color: Colors.grey)) ,
+            title: Column(
+              children: [
+                Text("Maria"),
+                Text("22 pontos"),
+                Text(" 3 lugar")
+              ],
+            ),
           ),
-          Text("22 pontos"),
-          Text(" 3 lugar"),
+         
           Expanded(
             child: GridView(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -23,8 +29,8 @@ class HomePage extends StatelessWidget {
                 Column(
                   children: [
                     Container(
-                      color: Color.fromARGB(255, 53, 99, 197),
-                      height: 80,
+                      color: Color.fromARGB(255, 165, 160, 167),
+                      height: 70,
                       child: Center(child: Text('10'),),
                     ),
                     Text('Ted')
@@ -33,18 +39,18 @@ class HomePage extends StatelessWidget {
                 Column(
                   children: [
                     Container(
-                      color: Color.fromARGB(255, 53, 99, 197),
-                      height: 80,
+                      color:  Color.fromARGB(255, 165, 160, 167),
+                      height: 70,
                       child: Center(child: Text('10'),),
                     ),
-                    Text('Poo')
+                    Text('Poo',style: TextStyle(color: Colors.black) ,)
                   ],
                 ),
                 Column(
                   children: [
                     Container(
-                      color: Color.fromARGB(255, 53, 99, 197),
-                      height: 80,
+                      color:  Color.fromARGB(255, 165, 160, 167),
+                      height: 70,
                       child: Center(child: Text('10'),),
                     ),
                     Text('Match')
@@ -53,8 +59,8 @@ class HomePage extends StatelessWidget {
                 Column(
                   children: [
                     Container(
-                      color: Color.fromARGB(255, 53, 99, 197),
-                      height: 80,
+                      color: Color.fromARGB(255, 165, 160, 167),
+                      height: 70,
                       child: Center(child: Text('10'),),
                     ),
                     Text('Espanhol')
@@ -63,8 +69,8 @@ class HomePage extends StatelessWidget {
                 Column(
                   children: [
                     Container(
-                      color: Color.fromARGB(255, 53, 99, 197),
-                      height: 80,
+                      color:  Color.fromARGB(255, 165, 160, 167),
+                      height: 70,
                       child: Center(child: Text('10'),),
                     ),
                     Text('Bioligia')
@@ -73,8 +79,8 @@ class HomePage extends StatelessWidget {
                 Column(
                   children: [
                     Container(
-                      color: Color.fromARGB(255, 53, 99, 197),
-                      height: 80,
+                      color:  Color.fromARGB(255, 165, 160, 167),
+                      height: 70,
                       child: Center(child: Text('10'),),
                     ),
                     Text('Química')
@@ -83,8 +89,8 @@ class HomePage extends StatelessWidget {
                 Column(
                   children: [
                     Container(
-                      color: Color.fromARGB(255, 53, 99, 197),
-                      height: 80,
+                      color:  Color.fromARGB(255, 165, 160, 167),
+                      height: 70,
                       child: Center(child: Text('10'),),
                     ),
                     Text('Ppw')
@@ -95,10 +101,9 @@ class HomePage extends StatelessWidget {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(items: [
-        BottomNavigationBarItem(icon: Icon(Icons.home_rounded), label: 'Home'),
-        BottomNavigationBarItem(icon: Icon(Icons.transfer_within_a_station_sharp), label: 'Transfer'),
-        BottomNavigationBarItem(
-            icon: Icon(Icons.notification_add), label: 'Notifications'),
+        BottomNavigationBarItem(icon:ClipOval(child: Container(child: Icon(Icons.home), color: Color.fromARGB(255, 169, 87, 216) )),label: 'Home',),
+        BottomNavigationBarItem(icon:ClipOval(child: Container(child: Icon(Icons.transfer_within_a_station_outlined), color: Color.fromARGB(255, 169, 87, 216))),label: 'transfer',),  
+        BottomNavigationBarItem(icon:ClipOval(child: Container(child: Icon(Icons.notifications), color:  Color.fromARGB(255, 169, 87, 216))),label: 'Notification',),
       ]),
     );
   }
