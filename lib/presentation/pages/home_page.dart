@@ -6,96 +6,38 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //backgroundColor: Color.fromARGB(255, 24, 19, 26),
-      appBar: AppBar(title:  Text("Pix Point", style: TextStyle(color: Colors.black),), backgroundColor: Color.fromARGB(255, 169, 87, 216),),
+      backgroundColor: Color.fromARGB(255, 53, 167, 70),
       body: Column(
         children: [
-          ListTile(
-            leading:ClipOval(child: Container(child: Icon(Icons.emoji_people_outlined, size: 50,), color: Colors.grey)) ,
-            title: Column(
-              children: [
-                Text("Maria"),
-                Text("22 pontos"),
-                Text(" 3 lugar")
-              ],
+          Container(
+            height: 150,
+            
+            child: ListTile(
+              leading:ClipOval(child: Container(child:Image.network("https://cdn0.iconfinder.com/data/icons/standard-characters/101/mature_male_slicked3-1024.png"))) ,
+              title: Column(
+                children: [
+                  Text("Maria"),
+                  Text("22 pontos"),
+                  Text(" 3 lugar")
+                ],
+              ),
             ),
           ),
          
           Expanded(
-            child: GridView(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 4, mainAxisSpacing: 8, crossAxisSpacing: 8),
+            child:ListView(
               children: [
-                Column(
-                  children: [
-                    Container(
-                      color: Color.fromARGB(255, 165, 160, 167),
-                      height: 70,
-                      child: Center(child: Text('10'),),
-                    ),
-                    Text('Ted')
-                  ],
+                Card(  child: Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: ListTile(
+                  title: Text("1° Marven Carole"),
+                  subtitle: Text("Sammya"),
+                  trailing: Image.network(
+                      "https://cdn0.iconfinder.com/data/icons/standard-characters/101/mature_male_slicked3-1024.png"),
                 ),
-                Column(
-                  children: [
-                    Container(
-                      color:  Color.fromARGB(255, 165, 160, 167),
-                      height: 70,
-                      child: Center(child: Text('10'),),
-                    ),
-                    Text('Poo',style: TextStyle(color: Colors.black) ,)
-                  ],
-                ),
-                Column(
-                  children: [
-                    Container(
-                      color:  Color.fromARGB(255, 165, 160, 167),
-                      height: 70,
-                      child: Center(child: Text('10'),),
-                    ),
-                    Text('Match')
-                  ],
-                ),
-                Column(
-                  children: [
-                    Container(
-                      color: Color.fromARGB(255, 165, 160, 167),
-                      height: 70,
-                      child: Center(child: Text('10'),),
-                    ),
-                    Text('Espanhol')
-                  ],
-                ),
-                Column(
-                  children: [
-                    Container(
-                      color:  Color.fromARGB(255, 165, 160, 167),
-                      height: 70,
-                      child: Center(child: Text('10'),),
-                    ),
-                    Text('Bioligia')
-                  ],
-                ),
-                Column(
-                  children: [
-                    Container(
-                      color:  Color.fromARGB(255, 165, 160, 167),
-                      height: 70,
-                      child: Center(child: Text('10'),),
-                    ),
-                    Text('Química')
-                  ],
-                ),
-                Column(
-                  children: [
-                    Container(
-                      color:  Color.fromARGB(255, 165, 160, 167),
-                      height: 70,
-                      child: Center(child: Text('10'),),
-                    ),
-                    Text('Ppw')
-                  ],
-                )],
+              ))
+              ],
+
             ),
           )
         ],
